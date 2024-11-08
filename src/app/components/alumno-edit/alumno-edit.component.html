@@ -1,0 +1,28 @@
+    <div class="container col-sm mt-5">
+        <div class="container">
+            <h2 class="mb-4">Actualizar Alumno</h2>
+            <form (submit)="updateAlumno(editedName, editedLastname, +editedAge.value, editedEmail)">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" value="{{alumno.nombre}}" required #editedName>
+              </div>
+              
+              <div class="form-group">
+                <label for="apellido">Apellido</label>
+                <input type="text" class="form-control" id="apellido" value="{{alumno.apellido}}" required #editedLastname>
+              </div>
+              
+              <div class="form-group">
+                <label for="edad">Edad</label>
+                <input type="number" class="form-control" id="edad" value="{{alumno.edad}}" required #editedAge>
+              </div>
+
+                <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" value="{{alumno.email}}" required #editedEmail>
+                </div>
+              
+              <button type="submit" class="btn btn-dark m-2">Actualizar</button>
+            </form>
+          </div>
+    </div>
